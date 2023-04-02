@@ -1,3 +1,5 @@
+import { montserrat, josefin_sans } from './fonts';
+
 import './globals.css';
 
 import PageHeader from './PageHeader';
@@ -14,7 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${montserrat.variable} ${josefin_sans.variable}`}
+    >
       <body>
         <PageHeader />
         {children}

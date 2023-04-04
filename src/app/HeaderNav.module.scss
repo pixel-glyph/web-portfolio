@@ -1,0 +1,80 @@
+@import './utils.scss';
+
+.nav {
+  position: fixed;
+  top: em(56);
+  right: 0;
+  width: 100%;
+  height: calc(100vh - #{em(56)});
+  background-color: #ffffff;
+  z-index: 10;
+  transition: opacity 0.25s ease;
+  
+  &.show {
+    opacity: 0.95;
+    pointer-events: auto;
+  }
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @include desktop {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    font-size: em(16);
+    background-color: inherit;
+    color: #fff;
+    z-index: 1;
+    opacity: 100 !important;
+    pointer-events: auto !important;
+  }
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: em(140);
+  margin: em(70) auto 0;
+  padding: 0;
+  color: $nile-blue;
+
+  @include tablet {
+    margin: em(100) auto;
+  }
+  
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0;
+    width: em(350);
+    height: 100%;
+    margin: 0;
+    padding: 0 em(70) 0 0;
+  }
+}
+
+.navListItem {
+  text-align: center;
+  padding: em(12) 0 em(5);
+  font-weight: bold;
+  letter-spacing: em(0.5);
+  border-bottom: em(2) solid #b9b9b9;
+
+  @include desktop {
+    border: none;
+    transition: color 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: #e2e2e2;
+    }
+  }
+}

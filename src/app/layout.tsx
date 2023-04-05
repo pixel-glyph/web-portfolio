@@ -1,6 +1,7 @@
 import { montserrat, josefin_sans } from './fonts';
 
 import './globals.css';
+import './styles.scss';
 
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';

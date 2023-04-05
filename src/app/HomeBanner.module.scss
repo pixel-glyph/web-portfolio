@@ -1,0 +1,73 @@
+@import './utils.scss';
+
+.banner {
+  position: relative;
+  background: linear-gradient($marzipan, $porsche);
+  height: em(300);
+
+  @include tablet-wide {
+    height: em(400);
+    
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -7vw;
+      height: 14.90vw;
+      width: 100%;
+      transform: skewY(-8deg);
+      transform-origin: 50% 0;
+      outline: 1px solid transparent;
+      backface-visibility: hidden;
+      background-color: white;
+      z-index: 4;
+    }
+  }
+  
+  @include desktop {
+    height: em(450);
+    font-size: 23px;
+  }
+
+  @include desktop-wide {
+    height: calc(100vh - #{em($header-height)});
+  }
+}
+
+.textWrapper {
+  width: em(272);
+  margin: 0 auto;
+  padding-top: em(32);
+
+  h1 {
+    margin: 0;
+    padding: 0 0 0 em(20);
+    font-weight: bold;
+    font-size: em(18);
+    color: #3A3A3A;
+  }
+
+  p {
+    margin: em(8) 0 0;
+    font-size: em(13);
+    letter-spacing: em(0.3);
+    color: #5D5D5D;
+  }
+
+  @include tablet-wide {
+    margin: 0 0 0 12%;
+    padding-top: em(130);
+  }
+
+  @include desktop {
+    padding-top: em(110);
+
+    h1 {
+      font-size: 36px;
+      padding-left: em(6);
+    }
+  }
+
+  @include desktop-wide {
+    padding-top: 35vh;
+  }
+}

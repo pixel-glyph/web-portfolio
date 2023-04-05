@@ -1,0 +1,19 @@
+@import './utils.scss';
+
+body {
+  &.no-scroll { 
+    overflow: hidden;
+  }
+  
+  @include phone-wide {
+    font-size: 18px;
+  }
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include tablet-wide {
+    font-size: 20px;
+  }
+}

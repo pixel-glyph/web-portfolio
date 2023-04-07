@@ -12,7 +12,7 @@
     margin: em(50) 0;
 
     &:hover {
-      image {
+      .image {
         transform: scale(1.025);    
       }
       .underline {
@@ -21,7 +21,7 @@
       }
     }
 
-    &:nth-of-type(odd) {
+    &:nth-of-type(even) {
       .link {
         flex-direction: row-reverse;
       }
@@ -132,7 +132,6 @@
 
 .desc {
   margin-top: em(10);
-  // font-family: $Montserrat;
   font-size: em(13);
   color: $boulder;
   letter-spacing: em(0.5);
@@ -140,14 +139,15 @@
 
 .image {
   max-width: 100%;
+  height: auto;
   border: 1px solid $alto;
   transition: transform 0.3s ease-out;
 
   @include desktop {
-    max-width: 45%;
+    width: 450px;
   }
 
-  @include desktop {
-    max-width: 500px;
+  @include desktop-wide {
+    width: 500px;
   }
 }

@@ -6,7 +6,19 @@
   background-color: white;
 
   @include tablet {
-    padding: em(40) em(38);
+    padding: em(112) em(38);
+  }
+
+  @include desktop {
+    padding-top: 13.4vw;
+  }
+
+  @include desktop-wide {
+    padding-top: 12vw;
+  }
+
+  @include desktop-wide-l {
+    padding-top: 11vw;
   }
 }
 

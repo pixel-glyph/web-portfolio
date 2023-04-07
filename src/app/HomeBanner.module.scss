@@ -12,7 +12,7 @@
       content: "";
       position: absolute;
       bottom: -7vw;
-      height: 14.90vw;
+      height: 14.125vw;
       width: 100%;
       transform: skewY(-8deg);
       transform-origin: 50% 0;
@@ -30,6 +30,10 @@
 
   @include desktop-wide {
     height: calc(100vh - #{em($header-height)});
+    &:after {
+      height: 12.5vw;
+      transform: skewY(-6deg);
+    }
   }
 }
 

@@ -20,13 +20,7 @@ export default function ProjectPreview({
           <div className={styles.underline}></div>
           <p className={styles.desc}>{desc}</p>
         </div>
-        <Image
-          src={imgSrc}
-          alt={imgAlt}
-          // width={}
-          // height={}
-          className={styles.image}
-        />
+        <Image src={imgSrc} alt={imgAlt} width={500} className={styles.image} />
       </Link>
     </li>
   );

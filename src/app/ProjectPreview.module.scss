@@ -1,0 +1,153 @@
+@import './utils.scss';
+
+.preview {
+  margin: em(40) 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    font-size: 20px;
+    margin: em(50) 0;
+
+    &:hover {
+      image {
+        transform: scale(1.025);    
+      }
+      .underline {
+        visibility: visible;
+        transform-origin: left;
+      }
+    }
+
+    &:nth-of-type(odd) {
+      .link {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .cloudcheckr-cmx:hover {
+    background-color: 'pink';
+    .underline {
+      transform: scaleX(106);
+    }
+  }
+  .chime:hover {
+    .underline {
+      transform: scaleX(80);
+    }
+  }
+  .heretto-docs:hover {
+    .underline {
+      transform: scaleX(68);
+    }
+  }
+  .sasb-nav:hover {
+    .underline {
+      transform: scaleX(96);
+    }
+  }
+  .better-reads:hover {
+    .underline {
+      transform: scaleX(76);
+    }
+  }
+}
+
+@include desktop-wide {
+  .cloudcheckr-cmx:hover {
+    .underline {
+      transform: scaleX(140);
+    }
+  }
+  .chime:hover {
+    .underline {
+      transform: scaleX(108);
+    }
+  }
+  .heretto-docs:hover {
+    .underline {
+      transform: scaleX(90);
+    }
+  }
+  .sasb-nav:hover {
+    .underline {
+      transform: scaleX(128);
+    }
+  }
+  .better-reads:hover {
+    .underline {
+      transform: scaleX(102);
+    }
+  }
+}
+
+.link {
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.textWrapper {
+  @include desktop {
+    max-width: 45%;
+  }
+
+  @include desktop-wide {
+    max-width: 41%;
+  }
+}
+
+.heading {
+  @include home-heading(em(20));
+  
+  @include desktop {
+    padding-left: em(15);
+  }
+  
+  @include desktop-wide {
+    font-size: 1.65em;
+  }
+}
+
+.underline {
+  width: 2px;
+  height: 2px;
+  margin-left: 38px; 
+  background-color: $nile-blue;
+  visibility: hidden;
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  @include desktop-wide {
+    height: 3px;
+    margin-left: 50px;
+  }
+}
+
+.desc {
+  margin-top: em(10);
+  // font-family: $Montserrat;
+  font-size: em(13);
+  color: $boulder;
+  letter-spacing: em(0.5);
+}
+
+.image {
+  max-width: 100%;
+  border: 1px solid $alto;
+  transition: transform 0.3s ease-out;
+
+  @include desktop {
+    max-width: 45%;
+  }
+
+  @include desktop {
+    max-width: 500px;
+  }
+}

@@ -1,0 +1,49 @@
+@import './utils.scss';
+
+.section {
+  padding: em(30) em(18) em(40);
+  z-index: 4;
+  background-color: white;
+
+  @include tablet {
+    padding: em(40) em(38);
+  }
+}
+
+.sectionContent {
+  @include desktop {
+    max-width: 1206px;
+    margin: 0 auto;
+    padding-bottom: 4em;
+  }
+
+  @include desktop-wide {
+    max-width: 1306px;
+    font-size: 24px;
+  }
+}
+
+.heading {
+  @include home-heading(em(28));
+}
+
+.underline {
+  width: em(103);
+  height: 2px;
+  background-color: $nile-blue;
+  margin-left: em(16);
+
+  @include desktop {
+    height: 3px;
+  }
+}
+
+.projectsWrapper {
+  max-width: 500px;
+  margin: em(40) auto 0;
+
+  @include desktop {
+    font-size: 18px;
+    max-width: 1250px;
+  }
+}

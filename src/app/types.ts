@@ -9,4 +9,5 @@ export interface ProjectPreviewType {
   imgSrc: string;
   imgAlt: string;
   url: string;
+  hash: string;
 }

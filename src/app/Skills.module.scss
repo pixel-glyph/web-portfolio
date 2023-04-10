@@ -1,0 +1,219 @@
+@import './utils.scss';
+
+.section {
+  padding: em(40) em(38);
+  background-color: #F5F5F5;
+  z-index: 4;
+
+  @include desktop {
+    margin-top: -7.04607vw;
+    transform: translateY(7.04607vw);
+  }
+
+  @include desktop-wide {
+    font-size: 24px;
+    padding-top: 3.3em;
+  }
+}
+
+.headingWrapper {
+  text-align: center;
+
+  h2 {
+    @include home-heading(em(28));
+  }
+}
+
+.underline {
+  width: em(103);
+  height: 2px;
+  background-color: $nile-blue;
+  width: em(40);
+  margin: 0 auto;
+
+  @include desktop {
+    height: 3px;
+  }
+}
+
+.iconGroup {
+  display: none;
+  position: relative;
+  width: 42em;
+  height: 19.5em;
+  margin: 5em auto 4.5em;
+
+  @include desktop {
+    display: block;
+    margin-bottom: 15.50135vw;
+  }
+
+  @include desktop-wide {
+    font-size: 22px;
+  }
+}
+
+.skillLines {
+  display: block;
+  margin: 0 auto;
+  width: 42em;
+  height: 19.5em;
+}
+
+.htmlIcon {
+  display: block;
+  width: em(97);
+  height: em(139);
+  margin: em(35) auto 0;
+}
+
+.cssIcon {
+  display: block;
+  width: em(90);
+  height: em(137);
+  margin: em(35) auto 0;
+}
+
+.jsIcon {
+  width: em(108);
+  display: block;
+  margin: em(45) auto em(15);
+  height: auto;
+}
+
+.reduxIcon {
+  width: em(36);
+  height: em(32);
+  margin-left: em(-2);
+}
+
+.reactIcon {
+  width: em(38);
+  height: em(34);
+  margin-left: em(-12);
+}
+
+.webpackIcon {
+  width: em(30);
+  height: em(34);
+  margin-right: em(-7);
+}
+
+.sassIcon {
+  margin-left: em(54);
+}
+
+.emotionIcon {
+  width: em(44);
+  height: auto;
+  margin-right: em(30);
+}
+
+@include desktop {
+  .icon {
+    position: absolute;
+    margin: 0;
+  }
+
+  .htmlIcon {
+    bottom: 2.6em;
+    left: 14.4em;
+    width: 5.9em;
+    height: 9em;
+  }
+
+  .cssIcon {
+    top: -3em;
+    left: 2.5em;
+    width: 5.5em;
+    height: 8.4em;
+  }
+
+  .jsIcon {
+    top: 2.85em;
+    right: 4.6375em;
+    width: 6.375em;
+  }
+
+  .reduxIcon {
+    top: 2.45em;
+    right: 14.6em;
+  }
+
+  .reactIcon {
+    top: -2.7em;
+    right: 12.8em;
+    width: 3.6em;
+    height: 3.2em;
+  }
+
+  .nextjsIcon {
+    width: 2.9em;
+    height: auto;
+    right: 5.9em;
+    top: -3.4em;
+  }
+  
+  .typescriptIcon {
+    width: 3em;
+    height: auto;
+    right: -3.6em;
+    top: 1.2em;
+  }
+  
+  .storybookIcon {
+    width: 46px;
+    height: 50px;
+    right: 2.1em;
+    top: -2.5em;
+  }
+
+  .webpackIcon {
+    bottom: 7.9em;
+    right: -2.75em;
+    width: 3.2em;
+    height: 3.2em;
+  }
+
+  .jestIcon {
+    bottom: 1.4em;
+    right: 4.8em;
+    width: 2.2em;
+    height: 2.2em;
+  }
+
+  .rtlIcon {
+    bottom: 2.1em;
+    right: 2.3em;
+    width: 2.2em;
+    height: 2.2em;
+  }
+
+  .sassIcon {
+    top: 0;
+    left: 12.9em;
+    width: 3.8em;
+    height: 2.8em;
+  }
+
+  .emotionIcon {
+    width: 50px;
+    top: 6.3em;
+    left: -2.9em;
+  }
+
+  .styledComponents {
+    position: absolute;
+    display: inline-block;
+    font-size: 44px;
+    top: 3.9em;
+    left: -0.45em;
+    cursor: default;
+  }
+}
+
+@include desktop-wide {
+  .styledComponents {
+    font-size: 46px;
+  }
+}

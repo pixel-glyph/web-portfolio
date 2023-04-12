@@ -15,17 +15,10 @@ export default function Skills() {
       </div>
       <div className={styles.iconGroup}>
         <Image
-          src="/skill_lines.svg"
-          alt=""
-          className={`${styles.icon} ${styles.skillLines}`}
-          width={840}
-          height={390}
-        />
-        <Image
-          src={jsIcon}
-          alt="JavaScript Icon"
-          title="JavaScript"
-          className={`${styles.icon} ${styles.jsIcon}`}
+          src="/html5.svg"
+          alt="HTML Icon"
+          title="HTML5"
+          className={`${styles.icon} ${styles.htmlIcon}`}
           width={100}
           height={100}
         />
@@ -38,12 +31,33 @@ export default function Skills() {
           height={100}
         />
         <Image
-          src="/html5.svg"
-          alt="HTML Icon"
-          title="HTML5"
-          className={`${styles.icon} ${styles.htmlIcon}`}
+          src="/mobile-css-lines.svg"
+          alt=""
+          className={`${styles.icon} ${styles.cssLines}`}
+          width={500}
+          height={250}
+        />
+        <Image
+          src={jsIcon}
+          alt="JavaScript Icon"
+          title="JavaScript"
+          className={`${styles.icon} ${styles.jsIcon}`}
           width={100}
           height={100}
+        />
+        <Image
+          src="/mobile-js-lines.svg"
+          alt=""
+          className={`${styles.icon} ${styles.jsLines}`}
+          width={500}
+          height={250}
+        />
+        <Image
+          src="/skill_lines.svg"
+          alt=""
+          className={`${styles.icon} ${styles.skillLines}`}
+          width={840}
+          height={390}
         />
         <Image
           src={reduxIcon}

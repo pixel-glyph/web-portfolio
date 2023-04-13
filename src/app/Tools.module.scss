@@ -1,0 +1,100 @@
+@import './utils.scss';
+
+.section {
+  padding: em(30) 0;
+  background-color: #fff;
+  z-index: 4;
+  position: relative;
+
+  @include desktop {
+    padding: 5em em(38) em(40);
+    background-color: white;
+    z-index: 5;
+    transform: skewy(8deg);
+  }
+
+  @include desktop-wide {
+    padding-top: 3.3em;
+  }
+}
+
+.headingWrapper {
+  text-align: center;
+
+  @include desktop {
+    transform: skewy(-8deg);
+  }
+
+  h2 {
+    @include home-heading(em(28));
+  }
+}
+
+.underline {
+  width: em(103);
+  height: 2px;
+  background-color: $nile-blue;
+  width: em(40);
+  margin: 0 auto;
+
+  @include desktop {
+    height: 3px;
+  }
+}
+
+.iconGroup {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 40px auto;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    width: em(450);
+    margin-top: em(38);
+  }
+
+  @include desktop {
+    width: 67%;
+    flex-direction: row;
+    max-width: 930px;
+    min-width: 825px;
+    margin: 2.5em auto 1.2em;
+    font-size: 20px;
+  }
+
+  @include desktop-wide {
+    font-size: 21px;
+  }
+}
+
+.mobileGroup {
+  display: flex;
+  margin: 1em 0px;
+
+  @include desktop {
+    display: block;
+    margin: 0;
+  }
+}
+
+.icon {
+  margin: 0 em(30) 0;
+
+  @include desktop {
+    margin: 1.375em;
+    transform: skewY(-8deg);
+  }
+}
+
+.iconWide {
+  height: auto;
+  width: em(50);
+}
+
+.iconTall {
+  height: em(50);;
+  width: auto;
+}

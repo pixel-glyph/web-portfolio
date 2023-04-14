@@ -1,0 +1,49 @@
+@import './utils.scss';
+
+.section {
+  padding: em(50) em(25);
+  text-align: center;
+  background-color: $nile-blue;
+  color: #fff;
+  z-index: 4;
+
+  @include desktop {
+    padding: 15.412vw 1.5em 6em;
+    margin-bottom: -7.1vw;
+    transform: translateY(-7vw);
+  }
+
+  h2 {
+    @include home-heading(em(34));
+    color: white;
+  }
+}
+
+.info {
+  max-width: em(420);
+  margin: em(16) auto;
+  font-size: em(14);
+
+  @include desktop {
+    max-width: 32em;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  margin: 3em auto;
+  padding: em(14) em(21);
+  background-color: $porsche;
+  font-size: em(14);
+  border: none;
+  cursor: pointer;
+}
+
+.buttonText {
+  margin: 0 em(1) 0 em(14);
+}
+
+.icon {
+  height: auto;
+}

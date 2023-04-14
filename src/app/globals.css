@@ -65,6 +65,10 @@ h6 {
     font-family: var(--font-josefin-sans); 
 }
 
+button {
+  font-family: var(--font-montserrat);
+}
+
 ul {
   list-style-type: none;
 }

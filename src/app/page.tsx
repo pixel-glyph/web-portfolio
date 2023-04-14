@@ -4,9 +4,11 @@ import Skills from './Skills';
 import Tools from './Tools';
 import Contact from './Contact';
 
+import styles from './Page.module.scss';
+
 export default function Home() {
   return (
-    <main>
+    <main className={styles.sectionWrapper}>
       <HomeBanner />
       <ProjectPreviews />
       <Skills />

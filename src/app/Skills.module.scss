@@ -45,29 +45,12 @@
     font-size: 22px;
   }
 
-  @include tablet {
-    font-size: 24px;
-  }
-
-  @include tablet-wide {
-    font-size: 26px;
-  }
-
   @include desktop {
     display: block;
     width: 42em;
     height: 19.5em;
     font-size: 19px;
-    margin: 5em auto 4.5em;
-    margin-bottom: 15.50135vw;
-  }
-
-  @include desktop-wide {
-    font-size: 22px;
-  }
-
-  @include desktop-wide-m {
-    font-size: 24px;
+    margin: 5em auto 12vw;
   }
 }
 

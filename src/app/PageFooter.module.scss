@@ -1,0 +1,41 @@
+@import './utils.scss';
+
+.footer {
+  padding: 2.2em 1.5em 1.4em;
+  color: $alto;
+  background-color: $mine-shaft;
+  text-align: center;
+  border-top: 1px solid $boulder;
+  z-index: 4;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 2.5em;
+  }
+}
+
+.copyright {
+  font-size: em(12);
+  margin: 0 0 em(22);
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+.link {
+  display: inline-block;
+  margin: 0 em(16);
+  padding: em(10);
+
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.icon {
+  width: 1.75em;
+  height: 1.75em;
+}

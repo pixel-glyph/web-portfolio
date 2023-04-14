@@ -25,7 +25,6 @@
   
   @include desktop {
     height: em(450);
-    font-size: 23px;
   }
 
   @include desktop-wide {
@@ -36,6 +35,37 @@
     }
   }
 }
+
+// .home-banner__headshot {
+//   width: em(190);
+//   position: fixed;
+//   left: 20%;
+//   top: em(225);
+
+//   &.hide {
+//     visibility: hidden;
+//   }
+  
+//   @include tablet-wide {
+//     width: em(360);
+//     left: unset;
+//     right: 6%;
+//     top: em(125);
+//   }
+
+//   @include desktop {
+//     bottom: unset;
+//     top: em(165);
+//   }
+
+//   @include desktop-wide {
+//     position: fixed;
+//     top: unset;
+//     width: em(440);
+//     bottom: 12.8vw;
+//     margin-bottom: -82px;
+//   }
+// }
 
 .textWrapper {
   width: em(272);

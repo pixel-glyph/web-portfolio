@@ -8,13 +8,12 @@
   z-index: 4;
 
   @include desktop {
-    padding: 15.412vw 1.5em 6em;
-    margin-bottom: -7.1vw;
-    transform: translateY(-7vw);
+    margin-top: -7vw;
+    padding: 17.5vw 1.5em 6em;
   }
 
   h2 {
-    @include home-heading(em(34));
+    @include home-heading(em(28));
     color: white;
   }
 }

@@ -9,6 +9,7 @@
   background-color: #ffffff;
   z-index: 10;
   transition: opacity 0.25s ease;
+  touch-action: none;
   
   &.show {
     opacity: 0.95;
@@ -41,10 +42,12 @@
   width: em(140);
   margin: em(70) auto 0;
   padding: 0;
+  font-size: 22px;
   color: $nile-blue;
 
   @include tablet {
     margin: em(100) auto;
+    font-size: 26px;
   }
   
   @include desktop {

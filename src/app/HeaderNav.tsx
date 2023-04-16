@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { clsx } from 'clsx';
-import { useState } from 'react';
 
 import { NavLinkType } from './types';
 
@@ -13,13 +12,8 @@ interface NavProps {
 }
 
 export default function HeaderNav({ navLinks, show }: NavProps) {
-  const [showNav, setShowNav] = useState(false);
-
-  const toggleNav = () => setShowNav(!showNav);
-
   return (
     <nav
-      onClick={toggleNav}
       className={clsx({
         [styles.nav]: true,
         [styles.show]: show,

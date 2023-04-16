@@ -138,14 +138,6 @@
     font-size: 55px;
   }
 
-  @include tablet {
-    font-size: 60px;
-  }
-
-  @include tablet-wide {
-    font-size: 65px;
-  }
-
   @include desktop {
     position: absolute;
     display: inline-block;
@@ -157,11 +149,7 @@
   }
 
   @include desktop-wide {
-    font-size: 50px;
-  }
-
-  @include desktop-wide-m {
-    font-size: 55px;
+    font-size: 44px;
   }
 }
 

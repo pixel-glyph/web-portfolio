@@ -31,12 +31,16 @@
 .button {
   display: flex;
   align-items: center;
-  margin: 3em auto;
+  margin: 3em auto 0;
   padding: em(14) em(21);
   background-color: $porsche;
   font-size: em(14);
   border: none;
   cursor: pointer;
+
+  @include desktop {
+    margin-bottom: 3em;
+  }
 }
 
 .buttonText {

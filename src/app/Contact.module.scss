@@ -1,6 +1,7 @@
 @import './utils.scss';
 
 .section {
+  position: relative;
   padding: em(50) em(25);
   text-align: center;
   background-color: $nile-blue;

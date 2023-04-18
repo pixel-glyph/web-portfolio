@@ -36,36 +36,46 @@
   }
 }
 
-// .home-banner__headshot {
-//   width: em(190);
-//   position: fixed;
-//   left: 20%;
-//   top: em(225);
+.selfPic {
+  width: 12em;
+  height: auto;
+  position: fixed;
+  left: 34%;
+  top: 11.7em;
 
-//   &.hide {
-//     visibility: hidden;
-//   }
+  &.hide {
+    visibility: hidden;
+  }
+
+  @include phone-wide {
+    left: 42%;
+  }
+
+  @include tablet {
+    left: 50%;
+  }
   
-//   @include tablet-wide {
-//     width: em(360);
-//     left: unset;
-//     right: 6%;
-//     top: em(125);
-//   }
+  @include tablet-wide {
+    width: 18em;
+    left: unset;
+    right: 6%;
+    top: 8.5em;
+  }
 
-//   @include desktop {
-//     bottom: unset;
-//     top: em(165);
-//   }
+  @include desktop {
+    font-size: 22px;
+    bottom: unset;
+    top: 8.2em;
+  }
 
-//   @include desktop-wide {
-//     position: fixed;
-//     top: unset;
-//     width: em(440);
-//     bottom: 12.8vw;
-//     margin-bottom: -82px;
-//   }
-// }
+  @include desktop-wide {
+    position: fixed;
+    top: unset;
+    width: em(440);
+    bottom: 11vw;
+    margin-bottom: -82px;
+  }
+}
 
 .textWrapper {
   width: em(272);

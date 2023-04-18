@@ -1,9 +1,10 @@
 @import './utils.scss';
 
 .section {
+  position: relative;
   padding: 3em 1.5em 3em;
-  z-index: 4;
   background-color: white;
+  z-index: 4;
 
   @include tablet {
     padding: em(112) em(38);

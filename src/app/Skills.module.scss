@@ -1,6 +1,7 @@
 @import './utils.scss';
 
 .section {
+  position: relative;
   padding: em(40) em(38);
   background-color: #F5F5F5;
   z-index: 4;

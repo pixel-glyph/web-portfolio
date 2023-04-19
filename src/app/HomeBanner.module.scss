@@ -28,7 +28,7 @@
   }
 
   @include desktop-wide {
-    height: calc(100vh - #{em($header-height)});
+    height: calc(100vh - 3.5em);
     &:after {
       height: 12.5vw;
       transform: skewY(-6deg);
@@ -65,7 +65,7 @@
   @include desktop {
     font-size: 22px;
     bottom: unset;
-    top: 8.2em;
+    top: 11em;
   }
 
   @include desktop-wide {

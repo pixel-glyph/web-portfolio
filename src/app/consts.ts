@@ -12,12 +12,13 @@ export const navLinks: NavLinkType[] = [
     route: '/projects',
   },
   {
-    name: 'About',
-    route: '/#about',
-  },
-  {
     name: 'Contact',
     route: '/#contact',
+  },
+  {
+    name: 'About',
+    route: '/#about',
+    hasOnClick: true,
   },
 ];
 

@@ -5,7 +5,7 @@ import envelopeIcon from '../../public/envelope.svg';
 
 export default function Contact() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="contact">
       <h2>Get in Touch</h2>
       <p className={styles.info}>I am currently available for hire.</p>
       <p className={styles.info}>

@@ -21,7 +21,7 @@ $desktop-wide-m: 1550px;
 $desktop-wide-l: 1750px;
 $desktop-wide-xl: 2040px;
 
-$close-icon-width: 16px;
+$close-icon-width: 25px;
 $header-height: 56;
 
 $browser-context: 16;
@@ -95,4 +95,20 @@ $browser-context: 16;
   font-size: $size;
   font-weight: 400;
   color: $boulder;
+}
+
+@mixin modal($color) {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%);
+  width: 86%;
+  min-width: 310px;
+  max-width: 390px;
+  background-color: $color;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.5);
+  z-index: 60;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
 }

@@ -2,12 +2,12 @@
 
 .sectionWrapper {
   padding-top: em($header-height);
-
-  @include desktop-wide {
+  
+  @include desktop {
     font-size: 22px;
   }
 
-  @include desktop-wide-m {
+  @include desktop-wide {
     font-size: 24px;
   }
 }

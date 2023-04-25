@@ -32,12 +32,19 @@
 .button {
   display: flex;
   align-items: center;
+  height: 3.29em;
+  width: 12.86em;
   margin: 3em auto 0;
   padding: em(14) em(21);
   background-color: $porsche;
   font-size: em(14);
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #ecab42;
+  }
 
   @include desktop {
     margin-bottom: 3em;
@@ -50,4 +57,13 @@
 
 .icon {
   height: auto;
+}
+
+.disabled {
+  background-color: #e2c699;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: #e2c699;
+  }
 }

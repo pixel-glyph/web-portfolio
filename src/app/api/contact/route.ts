@@ -4,6 +4,8 @@ import { NextResponse } from "next/server";
 dotenv.config();
 
 export async function POST(request: Request) {
+  const data = await request.json();
+
   const nodemailer = require("nodemailer");
 
   let transporter = nodemailer.createTransport({
@@ -19,9 +21,9 @@ export async function POST(request: Request) {
   let info = await transporter.sendMail({
     from: process.env.FROM_ADDR,
     to: process.env.TO_ADDR,
-    subject: "Web Development!",
-    text: "The Quick Brown Fox",
-    html: "<p>The Quick Brown Fox</p>",
+    subject: "A new message from your portfolio",
+    text: `${data.message} | Sent from: ${data.first} ${data.last} | Email: ${data.email} | Company ${data.company}`,
+    html: `<p>From: ${data.first} ${data.last}</p><p>Email: ${data.email}</p><p>Company: ${data.company || 'none'}</p><p>${data.message}</p>`,
   });
 
   console.log("Message sent: %s", info.messageId);

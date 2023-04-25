@@ -1,34 +1,42 @@
 'use client';
 
 import Image from 'next/image';
-import styles from './Contact.module.scss';
+import { useRef, useState } from 'react';
+import { clsx } from 'clsx';
 
+import Spinner from './Spinner';
 import envelopeIcon from '../../public/envelope.svg';
 
+import styles from './Contact.module.scss';
+
 export default function Contact() {
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    setIsSubmitting(true);
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+
+    const formData = new FormData(e.currentTarget);
 
     fetch('/api/contact', {
       method: 'post',
-      body: new URLSearchParams(data),
-      headers: {
-        'content-type': 'application/x-www-form-urlencoded',
-      },
+      body: JSON.stringify(Object.fromEntries(formData)),
     })
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Invalid response: ${response.status}`);
         }
-        alert('Message sent!');
+        formRef.current?.reset();
+        console.log('MESSAGE SENT!');
       })
       .catch((reason) => {
         console.error(reason);
         alert(
           'There was an error submitting the form. Please try again later.'
         );
-      });
+      })
+      .finally(() => setIsSubmitting(false));
   }
 
   return (
@@ -39,7 +47,7 @@ export default function Contact() {
         If you’re on the lookout for a driven, best practices-following,
         detail-oriented frontend developer, look no further!
       </p>
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <div className="emailField">
           <label htmlFor="frm-email">Email</label>
           <input
@@ -85,15 +93,28 @@ export default function Contact() {
             required
           ></textarea>
         </div>
-        <button type="submit" className={styles.button}>
-          <Image
-            src={envelopeIcon}
-            alt=""
-            width={33}
-            height={22}
-            className={styles.icon}
-          />
-          <span className={styles.buttonText}>MESSAGE ME</span>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={clsx({
+            [styles.button]: true,
+            [styles.disabled]: isSubmitting,
+          })}
+        >
+          {!isSubmitting ? (
+            <>
+              <Image
+                src={envelopeIcon}
+                alt=""
+                width={33}
+                height={22}
+                className={styles.icon}
+              />
+              <span className={styles.buttonText}>MESSAGE ME</span>
+            </>
+          ) : (
+            <Spinner />
+          )}
         </button>
       </form>
     </section>

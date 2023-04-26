@@ -56,7 +56,7 @@ export default function Contact() {
             <label htmlFor="frm-first">First Name</label>
             <input
               id="frm-first"
-              className={styles.textInput}
+              className={`${styles.textInput} ${styles.input}`}
               type="text"
               name="first"
               autoComplete="given-name"
@@ -67,7 +67,7 @@ export default function Contact() {
             <label htmlFor="frm-last">Last Name</label>
             <input
               id="frm-last"
-              className={styles.textInput}
+              className={`${styles.textInput} ${styles.input}`}
               type="text"
               name="last"
               autoComplete="family-name"
@@ -79,7 +79,7 @@ export default function Contact() {
           <label htmlFor="frm-email">Email</label>
           <input
             id="frm-email"
-            className={styles.textInput}
+            className={`${styles.textInput} ${styles.input}`}
             type="email"
             name="email"
             autoComplete="email"
@@ -90,7 +90,7 @@ export default function Contact() {
           <label htmlFor="frm-company">Company</label>
           <input
             id="frm-company"
-            className={styles.textInput}
+            className={`${styles.textInput} ${styles.input}`}
             type="text"
             name="company"
           />
@@ -99,7 +99,7 @@ export default function Contact() {
           <label htmlFor="frm-message">Message</label>
           <textarea
             id="frm-message"
-            className={styles.textarea}
+            className={`${styles.textarea} ${styles.input}`}
             rows={10}
             name="message"
             required

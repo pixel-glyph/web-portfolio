@@ -65,6 +65,14 @@ h6 {
     font-family: var(--font-josefin-sans); 
 }
 
+textarea {
+  font-family: var(--font-montserrat);
+}
+
+input {
+  font-family: var(--font-montserrat);
+}
+
 button {
   font-family: var(--font-montserrat);
 }

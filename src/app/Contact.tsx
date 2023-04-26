@@ -21,26 +21,25 @@ export default function Contact() {
 
     const formData = new FormData(e.currentTarget);
 
-    fetch('/api/contact', {
-      method: 'post',
-      body: JSON.stringify(Object.fromEntries(formData)),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Invalid response: ${response.status}`);
-        }
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'post',
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
 
-        formRef.current?.reset();
-        setShowToast(true);
-        setTimeout(() => setShowToast(false), 4000);
-      })
-      .catch((reason) => {
-        console.error(reason);
-        alert(
-          'There was an error submitting the form. Please try again later.'
-        );
-      })
-      .finally(() => setIsSubmitting(false));
+      if (!response.ok) {
+        throw new Error(`Invalid response: ${response.status}`);
+      }
+
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 4000);
+      formRef.current?.reset();
+    } catch (error) {
+      console.error(error);
+      alert('There was an error submitting the form. Please try again later.');
+    }
+
+    setIsSubmitting(false);
   }
 
   return (
@@ -51,32 +50,24 @@ export default function Contact() {
         If you’re on the lookout for a driven, best practices-following,
         detail-oriented frontend developer, look no further!
       </p>
-      <form ref={formRef} onSubmit={handleSubmit}>
-        <div className="emailField">
-          <label htmlFor="frm-email">Email</label>
-          <input
-            id="frm-email"
-            type="email"
-            name="email"
-            autoComplete="email"
-            required
-          />
-        </div>
-        <div className="nameField">
-          <div>
+      <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.nameInputs}>
+          <div className={styles.inputWrapper}>
             <label htmlFor="frm-first">First Name</label>
             <input
               id="frm-first"
+              className={styles.textInput}
               type="text"
               name="first"
               autoComplete="given-name"
               required
             />
           </div>
-          <div>
+          <div className={styles.inputWrapper}>
             <label htmlFor="frm-last">Last Name</label>
             <input
               id="frm-last"
+              className={styles.textInput}
               type="text"
               name="last"
               autoComplete="family-name"
@@ -84,15 +75,32 @@ export default function Contact() {
             />
           </div>
         </div>
-        <div>
-          <label htmlFor="frm-company">Company</label>
-          <input id="frm-company" type="text" name="company" />
+        <div className={styles.inputWrapper}>
+          <label htmlFor="frm-email">Email</label>
+          <input
+            id="frm-email"
+            className={styles.textInput}
+            type="email"
+            name="email"
+            autoComplete="email"
+            required
+          />
         </div>
-        <div className="messageField">
+        <div className={styles.inputWrapper}>
+          <label htmlFor="frm-company">Company</label>
+          <input
+            id="frm-company"
+            className={styles.textInput}
+            type="text"
+            name="company"
+          />
+        </div>
+        <div className={styles.inputWrapper}>
           <label htmlFor="frm-message">Message</label>
           <textarea
             id="frm-message"
-            rows={6}
+            className={styles.textarea}
+            rows={10}
             name="message"
             required
           ></textarea>

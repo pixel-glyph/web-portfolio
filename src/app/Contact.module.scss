@@ -28,6 +28,45 @@
   }
 }
 
+.form {
+  max-width: 500px;
+  margin: 40px auto 0;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  
+  label {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+}
+
+.textInput {
+  height: 35px;
+  padding: 0 6px;
+  font-size: 18px;
+}
+
+
+.nameInputs {
+  display: flex;
+  justify-content: space-between;
+
+  .inputWrapper {
+    width: 48%;
+  }
+}
+
+.textarea {
+  min-height: 150px;
+  max-height: 500px;
+  resize: vertical;
+}
+
 .button {
   display: flex;
   align-items: center;

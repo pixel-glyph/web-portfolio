@@ -6,7 +6,6 @@
   text-align: center;
   background-color: $nile-blue;
   color: #fff;
-  z-index: 4;
 
   @include desktop {
     margin-top: -7vw;
@@ -37,13 +36,13 @@
   margin: 3em auto 0;
   padding: em(14) em(21);
   background-color: $porsche;
-  font-size: em(14);
   border: none;
+  font-size: em(14);
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: transform 0.2s ease;
 
   &:hover {
-    background-color: #ecab42;
+    transform: scale(1.025);
   }
 
   @include desktop {
@@ -62,8 +61,5 @@
 .disabled {
   background-color: #e2c699;
   cursor: not-allowed;
-
-  &:hover {
-    background-color: #e2c699;
-  }
+  transform: scale(1.025);
 }

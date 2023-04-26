@@ -11,23 +11,24 @@
   border-color: $nile-blue $nile-blue transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
-}
-.spinner::after {
-  content: '';  
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border: 3px solid;
-  border-color: transparent #fff #fff;
-  width: 1.143em;
-  height: 1.143em;
-  border-radius: 50%;
-  animation: rotationBack 0.5s linear infinite;
-  transform-origin: center center;
+
+  &::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent #fff #fff;
+    width: 1.143em;
+    height: 1.143em;
+    border-radius: 50%;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
 }
 
 @keyframes rotation {

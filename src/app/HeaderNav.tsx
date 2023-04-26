@@ -33,7 +33,6 @@ export default function HeaderNav({ navLinks, show }: NavProps) {
             <li key={name} className={styles.navListItem}>
               <Link
                 href={route}
-                prefetch={false}
                 className={josefin_sans.className}
                 onClick={hasOnClick ? toggleModal : undefined}
               >

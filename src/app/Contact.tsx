@@ -8,9 +8,11 @@ import Spinner from './Spinner';
 import envelopeIcon from '../../public/envelope.svg';
 
 import styles from './Contact.module.scss';
+import Toast from './Toast';
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const formRef = useRef(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -27,8 +29,10 @@ export default function Contact() {
         if (!response.ok) {
           throw new Error(`Invalid response: ${response.status}`);
         }
+
         formRef.current?.reset();
-        console.log('MESSAGE SENT!');
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 4000);
       })
       .catch((reason) => {
         console.error(reason);
@@ -117,6 +121,7 @@ export default function Contact() {
           )}
         </button>
       </form>
+      <Toast show={showToast} text="Message received!" />
     </section>
   );
 }

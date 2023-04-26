@@ -1,0 +1,28 @@
+@import './utils.scss';
+
+$toast-width: 240px;
+
+.toast {
+  position: fixed;
+  bottom: 80px;
+  right: calc(50% - (#{$toast-width} / 2));
+  width: $toast-width;
+  height: auto;
+  margin: 0 auto;
+  padding: 15px 15px;
+  font-size: 20px;
+  background: #fff;
+  color: $mine-shaft;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 1px 2px 8px hsla(0deg, 0%, 0%, 0.25);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+.show {
+  bottom: 100px;
+  opacity: 1;
+}

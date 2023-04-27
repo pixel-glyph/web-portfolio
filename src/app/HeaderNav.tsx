@@ -11,35 +11,53 @@ import Overlay from './Overlay';
 
 interface NavProps {
   navLinks: NavLinkType[];
-  show: boolean;
+  showMobileNav: boolean;
+  setShowMobileNav: Function;
 }
 
-export default function HeaderNav({ navLinks, show }: NavProps) {
+export default function HeaderNav({
+  navLinks,
+  showMobileNav,
+  setShowMobileNav,
+}: NavProps) {
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => setShowModal(!showModal);
+
+  const handleAboutClick = () => {
+    setShowMobileNav(false);
+    toggleModal();
+  };
 
   return (
     <>
       <nav
         className={clsx({
           [styles.nav]: true,
-          [styles.show]: show,
-          [styles.hide]: !show,
+          [styles.show]: showMobileNav,
+          [styles.hide]: !showMobileNav,
         })}
       >
         <ul className={styles.navList}>
-          {navLinks.map(({ route, name, hasOnClick }) => (
+          {navLinks.map(({ route, name }) => (
             <li key={name} className={styles.navListItem}>
               <Link
                 href={route}
                 className={josefin_sans.className}
-                onClick={hasOnClick ? toggleModal : undefined}
+                onClick={() => setShowMobileNav(false)}
               >
                 {name}
               </Link>
             </li>
           ))}
+          <li className={styles.navListItem}>
+            <button
+              className={`${josefin_sans.className} ${styles.navBtn}`}
+              onClick={handleAboutClick}
+            >
+              About
+            </button>
+          </li>
         </ul>
       </nav>
       <AboutModal show={showModal} toggle={toggleModal} />

@@ -15,11 +15,6 @@ export const navLinks: NavLinkType[] = [
     name: 'Contact',
     route: '/#contact',
   },
-  {
-    name: 'About',
-    route: '/#about',
-    hasOnClick: true,
-  },
 ];
 
 export const projectPreviews: ProjectPreviewType[] = [

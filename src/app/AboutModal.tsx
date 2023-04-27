@@ -18,9 +18,9 @@ export default function AboutModal({ show, toggle }: ModalProps) {
         [styles.show]: show,
       })}
     >
-      <div className={styles.close} onClick={toggle}>
+      <button className={styles.close} onClick={toggle}>
         <Image src="/close.svg" alt="close" width={25} height={25} />
-      </div>
+      </button>
 
       <div className={styles.description}>
         <h1>About Me</h1>

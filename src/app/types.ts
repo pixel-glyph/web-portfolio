@@ -3,7 +3,6 @@ import { StaticImageData } from "next/image";
 export interface NavLinkType {
   name: string;
   route: string;
-  hasOnClick?: boolean;
 }
 
 export interface ProjectPreviewType {

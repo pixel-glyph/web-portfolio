@@ -41,6 +41,8 @@ $icon-width: em(37);
   top: em(6);
   right: em(6);
   line-height: 0;
+  background: none;
+  border: none;
 
   @include tablet-wide {
     top: 0.2em;

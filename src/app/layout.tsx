@@ -2,6 +2,7 @@ import { montserrat, josefin_sans } from './fonts';
 
 import './globals.css';
 import './styles.scss';
+import styles from './layout.module.scss';
 
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
@@ -23,7 +24,7 @@ export default function RootLayout({
     >
       <body>
         <PageHeader />
-        {children}
+        <main className={styles.main}>{children}</main>
         <PageFooter />
       </body>
     </html>

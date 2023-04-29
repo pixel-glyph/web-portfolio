@@ -10,9 +10,9 @@ import styles from './PageHeader.module.scss';
 import { useState } from 'react';
 
 export default function PageHeader() {
-  const [showNav, setShowNav] = useState(false);
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
-  const toggleNav = () => setShowNav(!showNav);
+  const toggleNav = () => setShowMobileNav(!showMobileNav);
 
   return (
     <header className={styles.header}>
@@ -21,13 +21,17 @@ export default function PageHeader() {
           AJ
         </Link>
       </div>
-      <HeaderNav navLinks={navLinks} show={showNav} />
+      <HeaderNav
+        navLinks={navLinks}
+        showMobileNav={showMobileNav}
+        setShowMobileNav={setShowMobileNav}
+      />
       <div onClick={toggleNav} className={styles.mobileNavToggleWrapper}>
         <div className={styles.mobileNavToggleBox}>
           <div
             className={clsx({
               [styles.mobileNavToggle]: true,
-              [styles.isActive]: showNav,
+              [styles.isActive]: showMobileNav,
             })}
           ></div>
         </div>

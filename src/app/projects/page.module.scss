@@ -1,0 +1,45 @@
+@import './../utils.scss';
+
+.contentWrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include tablet {
+    padding-left: 20px;
+  }
+
+  @include tablet {
+    max-width: 96%;
+  }
+
+  @include desktop {
+    max-width: 1700px;
+    padding: 0 40px;
+  }
+
+  @include desktop-wide {
+    padding: 0 60px;
+  }
+
+}
+
+.header {
+  font-size: 3em;
+  font-weight: normal;
+  margin: -35px auto 80px;
+  color: $mine-shaft-lighter;
+
+  @include tablet {
+    width: 190px;
+    margin: -90px auto 180px;
+  }
+  
+  @include tablet-wide {
+    margin-bottom: 200px;
+  }
+
+  @include desktop-wide-m {
+    margin-bottom: 280px;
+  }
+}

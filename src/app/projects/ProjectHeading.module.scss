@@ -1,0 +1,66 @@
+@import './../utils.scss';
+
+.headingLines {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 200px;
+  transform: skewY(-7deg);
+
+  @include desktop-wide-m {
+    margin-top: 300px;
+  }
+}
+
+.lineGroupLeft {
+  visibility: hidden;
+
+  @include tablet {
+    visibility: visible;
+    transform: translateX(-280px);
+  }
+
+  @include desktop {
+    transform: translateX(-400px);
+  }
+}
+
+.lineGroupRight {
+  transform: translate(-110px, -125px);
+
+  @include tablet {
+    transform: translateX(250px);
+  }
+
+  @include desktop {
+    transform: translateX(400px);
+  }
+}
+
+.lineLeftAbove {
+  height: 30px;
+  width: 1000px;
+  background-color: #edbd6d;
+  transform: translateX(26px);
+  box-shadow: -6px -3px 6px 0px grey;
+}
+
+.lineLeftBelow {
+  height: 10px;
+  width: 1000px;
+  background-color: $nile-blue;
+}
+
+.lineRightAbove {
+  width: 1000px;
+  height: 30px;
+  background-color: #edbd6d;
+  box-shadow: 6px -3px 6px 0px grey;
+}
+
+.lineRightBelow {
+  width: 1000px;
+  height: 10px;
+  background-color: $nile-blue;
+  transform: translateX(40px);
+}

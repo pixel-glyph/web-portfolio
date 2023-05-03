@@ -30,8 +30,12 @@
 }
 
 @include desktop {
+  .mantl:hover {
+    .underline {
+      transform: scaleX(98);
+    }
+  }
   .cloudcheckr-cmx:hover {
-    background-color: 'pink';
     .underline {
       transform: scaleX(106);
     }
@@ -41,12 +45,12 @@
       transform: scaleX(80);
     }
   }
-  .heretto-docs:hover {
+  .docs-portal:hover {
     .underline {
       transform: scaleX(68);
     }
   }
-  .sasb-nav:hover {
+  .sasb:hover {
     .underline {
       transform: scaleX(96);
     }
@@ -59,6 +63,11 @@
 }
 
 @include desktop-wide {
+  .mantl:hover {
+    .underline {
+      transform: scaleX(128);
+    }
+  }
   .cloudcheckr-cmx:hover {
     .underline {
       transform: scaleX(140);
@@ -69,12 +78,12 @@
       transform: scaleX(108);
     }
   }
-  .heretto-docs:hover {
+  .docs-portal:hover {
     .underline {
       transform: scaleX(90);
     }
   }
-  .sasb-nav:hover {
+  .sasb:hover {
     .underline {
       transform: scaleX(128);
     }

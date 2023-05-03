@@ -9,9 +9,10 @@ export default function Project({
   copy,
   imgSrc,
   externalData,
+  id,
 }: ProjectType) {
   return (
-    <section className={styles.project}>
+    <section className={styles.project} id={id}>
       <h2 className={styles.header}>{title}</h2>
       <p>{copy}</p>
       {externalData && (
@@ -26,7 +27,7 @@ export default function Project({
           <Image
             src={src}
             alt={`${title} project screenshot`}
-            width={1000}
+            width={700}
             height={500}
             className={styles.image}
             key={src.src}
@@ -37,7 +38,7 @@ export default function Project({
           src={imgSrc}
           alt={`${title} project screenshot`}
           className={styles.image}
-          width={1000}
+          width={700}
           height={500}
         />
       )}

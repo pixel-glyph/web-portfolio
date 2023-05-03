@@ -59,20 +59,20 @@
     width: 18em;
     left: unset;
     right: 6%;
-    top: 8.5em;
+    top: 7em;
   }
 
   @include desktop {
     font-size: 22px;
     bottom: unset;
-    top: 11em;
+    top: 9.5em;
   }
 
   @include desktop-wide {
     position: fixed;
     top: unset;
     width: em(440);
-    bottom: 11vw;
+    bottom: 10.5vw;
     margin-bottom: -82px;
   }
 }

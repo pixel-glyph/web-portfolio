@@ -1,0 +1,42 @@
+@import './../utils.scss';
+
+.project {
+  padding-top: 60px;
+  
+  @include desktop {
+    padding-top: 120px;
+  }
+}
+
+.header {
+
+}
+
+.copy {
+
+}
+
+.imageWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 75px auto;
+  border: 1px solid $alto;
+
+  @include desktop {
+    margin: 120px auto;
+  }
+}
+
+.mobileImage {
+  max-width: 400px;
+}
+
+.tabletImage {
+  max-width: 800px;
+}

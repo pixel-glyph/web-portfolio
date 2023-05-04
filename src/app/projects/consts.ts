@@ -2,13 +2,10 @@ import { ProjectType } from "./types";
 import { projectHashes } from "../consts";
 
 import mantlQueue from '../../../public/projects/queue.png';
-import mantlAppliedFilters from '../../../public/projects/queue_applied_filters.png';
 import mantlCreateModal from '../../../public/projects/queue_create_modal.png';
-import mantlEditModal from '../../../public/projects/queue_edit_modal.png';
 import mantlPopover from '../../../public/projects/queue_popover.png';
 import mantlSavedDropdown from '../../../public/projects/queue_saved_filters_dropdown.png';
 import mantlSelectedOptions from '../../../public/projects/queue_selected_options.png';
-import mantlServicesTab from '../../../public/projects/queue_services_tab.png';
 import mantlSuccessToast from '../../../public/projects/queue_success_toast.png';
 
 import ccWelcome from '../../../public/projects/cc_welcome.png';
@@ -25,7 +22,6 @@ import docsPortalContent from '../../../public/projects/jorsek_docs_content.png'
 
 import sasbNav from '../../../public/projects/sasb_nav.png';
 
-import betterReadsSearch from '../../../public/projects/better_reads.png';
 import betterReadsList from '../../../public/projects/better_reads_list.png';
 
 export const projects: ProjectType[] = [
@@ -33,7 +29,14 @@ export const projects: ProjectType[] = [
     id: projectHashes.mantl,
     title: 'MANTL Queue Dashboard',
     copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores repellat nemo commodi nihil, in, quasi aspernatur officia nam ex id iure autem. Repellat ab soluta quas.',
-    imgSrc: [mantlQueue, mantlAppliedFilters, mantlCreateModal, mantlEditModal, mantlPopover, mantlSavedDropdown, mantlSelectedOptions, mantlServicesTab, mantlSuccessToast],
+    images: [
+      { src: mantlQueue },
+      { src: mantlPopover },
+      { src: mantlSelectedOptions },
+      { src: mantlCreateModal },
+      { src: mantlSuccessToast },
+      { src: mantlSavedDropdown },
+    ],
     externalData: {
       url: 'http://www.github.com',
       linkText: 'Check out the latest in cloud management software!'
@@ -43,7 +46,13 @@ export const projects: ProjectType[] = [
     id: projectHashes.cloudCheckr,
     title: 'CloudCheckr CMx',
     copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores repellat nemo commodi nihil, in, quasi aspernatur officia nam ex id iure autem. Repellat ab soluta quas.',
-    imgSrc: [ccWelcome, ccDashboards, ccCustomize, ccMobile, ccAccountList],
+    images: [
+      { src: ccWelcome },
+      { src: ccDashboards },
+      { src: ccCustomize },
+      { src: ccMobile, size: 'mobile' },
+      { src: ccAccountList },
+    ],
     externalData: {
       url: 'http://www.github.com',
       linkText: 'Check out the latest in cloud management software!'
@@ -53,7 +62,10 @@ export const projects: ProjectType[] = [
     id: projectHashes.chime,
     title: 'Chime Signup',
     copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores repellat nemo commodi nihil, in, quasi aspernatur officia nam ex id iure autem. Repellat ab soluta quas.',
-    imgSrc: [chimeDesktop, chimeMobile],
+    images: [
+      { src: chimeDesktop, size: 'tablet' },
+      { src: chimeMobile, size: 'mobile' },
+    ],
     externalData: {
       url: 'http://www.github.com',
       linkText: 'See Chime\'s signup flow.'
@@ -63,7 +75,10 @@ export const projects: ProjectType[] = [
     id: projectHashes.docsPortal,
     title: 'Docs Portal',
     copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores repellat nemo commodi nihil, in, quasi aspernatur officia nam ex id iure autem. Repellat ab soluta quas.',
-    imgSrc: [docsPortalHome, docsPortalContent],
+    images: [
+      { src: docsPortalHome },
+      { src: docsPortalContent },
+    ],
     externalData: {
       url: 'http://www.github.com',
       linkText: 'See it here!'
@@ -73,7 +88,9 @@ export const projects: ProjectType[] = [
     id: projectHashes.sasb,
     title: 'SASB Navigator',
     copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores repellat nemo commodi nihil, in, quasi aspernatur officia nam ex id iure autem. Repellat ab soluta quas.',
-    imgSrc: sasbNav,
+    images: [
+      { src: sasbNav },
+    ],
     externalData: {
       url: 'http://www.github.com',
       linkText: 'See it here!'
@@ -83,7 +100,9 @@ export const projects: ProjectType[] = [
     id: projectHashes.betterReads,
     title: 'BetterReads',
     copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores repellat nemo commodi nihil, in, quasi aspernatur officia nam ex id iure autem. Repellat ab soluta quas.',
-    imgSrc: [betterReadsSearch, betterReadsList],
+    images: [
+      { src: betterReadsList },
+    ],
     externalData: {
       url: 'http://www.github.com',
       linkText: 'See it here!'

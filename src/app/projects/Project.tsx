@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import clsx from 'clsx';
 
 import { ProjectType } from './types';
 import styles from './Project.module.scss';
@@ -7,7 +8,7 @@ import styles from './Project.module.scss';
 export default function Project({
   title,
   copy,
-  imgSrc,
+  images,
   externalData,
   id,
 }: ProjectType) {
@@ -22,26 +23,20 @@ export default function Project({
           </Link>
         </p>
       )}
-      {Array.isArray(imgSrc) ? (
-        imgSrc.map((src) => (
+      <div className={styles.imageWrapper}>
+        {images.map(({ src, size }) => (
           <Image
             src={src}
             alt={`${title} project screenshot`}
-            width={700}
-            height={500}
-            className={styles.image}
+            className={clsx({
+              [styles.image]: true,
+              [styles.mobileImage]: size === 'mobile',
+              [styles.tabletImage]: size === 'tablet',
+            })}
             key={src.src}
           />
-        ))
-      ) : (
-        <Image
-          src={imgSrc}
-          alt={`${title} project screenshot`}
-          className={styles.image}
-          width={700}
-          height={500}
-        />
-      )}
+        ))}
+      </div>
     </section>
   );
 }

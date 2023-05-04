@@ -4,7 +4,10 @@ export interface ProjectType {
   id: string;
   title: string;
   copy: string;
-  imgSrc: StaticImageData | StaticImageData[];
+  images: Array<{
+    src: StaticImageData,
+    size?: 'mobile' | 'tablet',
+  }>;
   externalData?: {
     url: string,
     linkText: string,

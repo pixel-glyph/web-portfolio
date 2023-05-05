@@ -4,17 +4,21 @@
   position: relative;
   padding: em(50) em(25);
   text-align: center;
-  background-color: $nile-blue;
+  background: linear-gradient(#285883, #173753);
   color: #fff;
 
   @include desktop {
     margin-top: -7vw;
-    padding: 17.5vw 1.5em 6em;
+    padding: 17.5vw 1.5em 3em;
   }
 
   h2 {
     @include home-heading(em(28));
     color: white;
+    
+    @include desktop {
+      margin-top: 80px;
+    }
   }
 }
 

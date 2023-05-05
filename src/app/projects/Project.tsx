@@ -15,11 +15,18 @@ export default function Project({
   return (
     <section className={styles.project} id={id}>
       <h2 className={styles.header}>{title}</h2>
-      <p>{copy}</p>
+      <p className={styles.copy}>{copy}</p>
       {externalData && (
-        <p>
-          <Link href={externalData.url} target="_blank">
+        <p className={styles.copy}>
+          <Link href={externalData.url} target="_blank" className={styles.link}>
             {externalData.linkText}
+            <Image
+              src="/projects/link.svg"
+              alt=""
+              className={styles.linkIcon}
+              width={25}
+              height={25}
+            />
           </Link>
         </p>
       )}

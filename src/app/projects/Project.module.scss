@@ -9,27 +9,43 @@
 }
 
 .header {
-
+  @include home-heading(em(24));
+  margin-bottom: 15px;
 }
 
 .copy {
-
+  font-size: 16px;
 }
 
-.imageWrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+.link {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: $nile-blue;
+}
+
+.linkIcon {
+  width: 1em;
+  height: 1.3em;
+  margin: 2px 0 -2px 8px;
+  fill: $nile-blue;
 }
 
 .image {
   display: block;
   width: 100%;
   height: auto;
-  margin: 75px auto;
+  margin: 50px auto;
   border: 1px solid $alto;
 
   @include desktop {
-    margin: 120px auto;
+    margin: 100px auto;
+
+    &:first-child {
+      margin-top: 50px;
+    }
   }
 }
 

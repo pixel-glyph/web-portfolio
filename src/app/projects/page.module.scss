@@ -6,22 +6,19 @@
   padding: 0 20px;
 
   @include tablet {
+    max-width: 95%;
+    margin-top: 32px;
     padding-left: 20px;
   }
-
-  @include tablet {
-    max-width: 96%;
-  }
-
+  
   @include desktop {
-    max-width: 1700px;
-    padding: 0 40px;
+    width: 90%;
   }
-
+  
   @include desktop-wide {
-    padding: 0 60px;
+    width: 85%;
+    max-width: 1400px;
   }
-
 }
 
 .header {

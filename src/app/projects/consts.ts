@@ -27,7 +27,7 @@ import betterReadsList from '../../../public/projects/better_reads_list.png';
 export const projects: ProjectType[] = [
   {
     id: projectHashes.mantl,
-    title: 'MANTL Queue Dashboard',
+    title: 'MANTL Search Filters',
     copy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maiores repellat nemo commodi nihil, in, quasi aspernatur officia nam ex id iure autem. Repellat ab soluta quas.',
     images: [
       { src: mantlQueue },
@@ -38,8 +38,8 @@ export const projects: ProjectType[] = [
       { src: mantlSavedDropdown },
     ],
     externalData: {
-      url: 'http://www.github.com',
-      linkText: 'Check out the latest in cloud management software!'
+      url: '/projects/Saved_Filters.mp4',
+      linkText: 'Check out a short demo of the search filters UI here'
     },
   },
   {
@@ -50,12 +50,12 @@ export const projects: ProjectType[] = [
       { src: ccWelcome },
       { src: ccDashboards },
       { src: ccCustomize },
-      { src: ccMobile, size: 'mobile' },
       { src: ccAccountList },
+      { src: ccMobile, size: 'mobile' },
     ],
     externalData: {
-      url: 'http://www.github.com',
-      linkText: 'Check out the latest in cloud management software!'
+      url: 'https://cloudcheckr.com/products/cmx/',
+      linkText: 'See the latest in cloud management software'
     },
   },
   {
@@ -67,8 +67,8 @@ export const projects: ProjectType[] = [
       { src: chimeMobile, size: 'mobile' },
     ],
     externalData: {
-      url: 'http://www.github.com',
-      linkText: 'See Chime\'s signup flow.'
+      url: 'https://www.chime.com/',
+      linkText: 'Have a look at Chime\'s signup flow'
     },
   },
   {
@@ -80,8 +80,8 @@ export const projects: ProjectType[] = [
       { src: docsPortalContent },
     ],
     externalData: {
-      url: 'http://www.github.com',
-      linkText: 'See it here!'
+      url: 'https://help.heretto.com/en/content-management/23/heretto-ccms-overview',
+      linkText: 'See the current iteration'
     },
   },
   {
@@ -92,8 +92,8 @@ export const projects: ProjectType[] = [
       { src: sasbNav },
     ],
     externalData: {
-      url: 'http://www.github.com',
-      linkText: 'See it here!'
+      url: 'https://www.sasb.org/blog/check-sasb-navigators-new-features-functionality/',
+      linkText: 'Read up on the SASB Navigator here'
     },
   },
   {
@@ -103,9 +103,5 @@ export const projects: ProjectType[] = [
     images: [
       { src: betterReadsList },
     ],
-    externalData: {
-      url: 'http://www.github.com',
-      linkText: 'See it here!'
-    },
   },
 ];

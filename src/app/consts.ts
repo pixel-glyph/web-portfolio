@@ -30,7 +30,7 @@ export const navLinks: NavLinkType[] = [
 export const projectPreviews: ProjectPreviewType[] = [
   {
     title: 'MANTL Console',
-    desc: 'A CRUD dashboard for managing search filters.',
+    desc: 'A highly-dynamic search UI with CRUD capabilities, powered by Elasticsearch.',
     imgSrc: mantlQueue,
     imgAlt: 'MANTL dashboard screenshot',
     url: '/projects',

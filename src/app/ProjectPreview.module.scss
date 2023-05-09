@@ -1,15 +1,19 @@
 @import './utils.scss';
 
 .preview {
-  margin: em(40) 0;
+  margin: 3em 0;
 
   &:last-of-type {
     margin-bottom: 0;
   }
 
+  @include tablet {
+    margin: 4em 0;
+  }
+
   @include desktop {
     font-size: 20px;
-    margin: em(50) 0;
+    margin: 5em 0;
 
     &:hover {
       .image {

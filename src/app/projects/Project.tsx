@@ -15,7 +15,11 @@ export default function Project({
   return (
     <section className={styles.project} id={id}>
       <h2 className={styles.header}>{title}</h2>
-      <p className={styles.copy}>{copy}</p>
+      {copy.map((paragraph, i) => (
+        <p className={styles.copy} key={i}>
+          {paragraph}
+        </p>
+      ))}
       {externalData && (
         <p className={styles.copy}>
           <Link href={externalData.url} target="_blank" className={styles.link}>

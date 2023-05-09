@@ -52,7 +52,7 @@ export default function Contact() {
       <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.nameInputs}>
           <div className={styles.inputWrapper}>
-            <label htmlFor="frm-first">First Name</label>
+            <label htmlFor="frm-first">First Name *</label>
             <input
               id="frm-first"
               className={`${styles.textInput} ${styles.input}`}
@@ -63,7 +63,7 @@ export default function Contact() {
             />
           </div>
           <div className={styles.inputWrapper}>
-            <label htmlFor="frm-last">Last Name</label>
+            <label htmlFor="frm-last">Last Name *</label>
             <input
               id="frm-last"
               className={`${styles.textInput} ${styles.input}`}
@@ -75,7 +75,7 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.inputWrapper}>
-          <label htmlFor="frm-email">Email</label>
+          <label htmlFor="frm-email">Email *</label>
           <input
             id="frm-email"
             className={`${styles.textInput} ${styles.input}`}
@@ -95,7 +95,7 @@ export default function Contact() {
           />
         </div>
         <div className={styles.inputWrapper}>
-          <label htmlFor="frm-message">Message</label>
+          <label htmlFor="frm-message">Message *</label>
           <textarea
             id="frm-message"
             className={`${styles.textarea} ${styles.input}`}

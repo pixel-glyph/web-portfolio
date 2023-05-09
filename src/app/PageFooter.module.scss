@@ -17,13 +17,23 @@
   }
 }
 
-.copyright {
+.copy {
   font-size: em(12);
   margin: 0 0 em(22);
-
+  
   @include desktop {
     margin: 0;
+    text-align: left;
   }
+}
+
+.small {
+  display: inline-block;
+  margin-top: 16px; 
+}
+
+.repoLink {
+  text-decoration: underline;
 }
 
 .link {

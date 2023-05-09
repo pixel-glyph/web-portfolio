@@ -6,10 +6,23 @@ import styles from './PageFooter.module.scss';
 export default function PageFooter() {
   return (
     <footer className={styles.footer}>
-      <p className={styles.copyright}>
-        Copyright © {new Date().getFullYear()} Andrew Jensen-Battaglia •
-        Frontend Developer
-      </p>
+      <div className={styles.copy}>
+        <p className={styles.copyright}>
+          Copyright © {new Date().getFullYear()} Andrew Jensen-Battaglia •
+          Frontend Developer
+        </p>
+        <small className={styles.small}>
+          This site, made by yours truly, is powered by Next.js and React.{' '}
+          <Link
+            href="https://github.com/pixel-glyph/web-portfolio"
+            target="_blank"
+            className={styles.repoLink}
+          >
+            Click here for the deets
+          </Link>
+          !
+        </small>
+      </div>
       <div>
         <Link
           href="https://github.com/pixel-glyph"

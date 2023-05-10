@@ -8,7 +8,11 @@ export default function HomeBanner() {
     <>
       <section className={styles.banner}>
         <div className={styles.textWrapper}>
-          <h1>Greetings, and welcome to my site!</h1>
+          <h1>
+            Hi, I’m Andrew.
+            <br />
+            Welcome to my site!
+          </h1>
           <p>
             I love to design, create, and problem solve. For me, frontend
             development is the wonderful nexus of all these things.

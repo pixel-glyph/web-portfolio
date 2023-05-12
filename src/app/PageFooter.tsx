@@ -8,8 +8,8 @@ export default function PageFooter() {
     <footer className={styles.footer}>
       <div className={styles.copy}>
         <p className={styles.copyright}>
-          Copyright © {new Date().getFullYear()} Andrew Jensen-Battaglia •
-          Frontend Developer
+          Copyright © {new Date().getFullYear()} Andrew Jensen • Frontend
+          Developer
         </p>
         <small className={styles.small}>
           This site, made by yours truly, is powered by Next.js and React.{' '}

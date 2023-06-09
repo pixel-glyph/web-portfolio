@@ -1,6 +1,7 @@
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { clsx } from 'clsx';
+import Modal from './Modal';
 import styles from './AboutModal.module.scss';
 
 import rocSkyline from '../../public/roc_skyline.jpg';
@@ -10,18 +11,9 @@ interface ModalProps {
   toggle: () => void;
 }
 
-export default function AboutModal({ show, toggle }: ModalProps) {
+export default function AboutModal(props: ModalProps) {
   return (
-    <div
-      className={clsx({
-        [styles.modal]: true,
-        [styles.show]: show,
-      })}
-    >
-      <button className={styles.close} onClick={toggle}>
-        <Image src="/close.svg" alt="close" width={25} height={25} />
-      </button>
-
+    <Modal {...props}>
       <div className={styles.description}>
         <h1>About Me</h1>
         <p>
@@ -78,6 +70,6 @@ export default function AboutModal({ show, toggle }: ModalProps) {
         width={800}
         height={1192}
       />
-    </div>
+    </Modal>
   );
 }

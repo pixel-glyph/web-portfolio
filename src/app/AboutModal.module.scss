@@ -2,62 +2,6 @@
 
 $icon-width: em(37);
 
-.modal {
-  @include modal(#fff);
-  border-radius: 8px;
-  
-  &.show {
-    pointer-events: auto;
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-
-  @include tablet {
-    max-width: 430px;
-  }
-
-  @include tablet-wide {
-    display: flex;
-    max-width: 39.3em;
-    width: 730px;
-    height: 30.6em;
-  }
-
-  @include desktop {
-    width: 41.5em;
-    height: 70vh;
-    max-width: none;
-    min-height: 500px;
-    max-height: 700px;
-    &:hover {
-      .close {
-        opacity: 1;
-      }
-    }
-  }
-}
-
-.close {
-  position: absolute;
-  padding: calc((48px - #{$close-icon-width}) / 2);
-  top: em(6);
-  right: em(6);
-  line-height: 0;
-  background: none;
-  border: none;
-
-  @include tablet-wide {
-    top: 0.2em;
-    right: 0.3em;
-  }
-
-  @include desktop {
-    opacity: 0.3;
-    cursor: pointer;
-    transition: opacity 200ms ease-in-out;
-  }
-}
-
 .description {
   padding: 2em 2.4em 1.25em;
   font-size: 12px;

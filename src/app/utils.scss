@@ -110,6 +110,7 @@ $browser-context: 16;
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.5);
   z-index: 60;
   opacity: 0;
-  pointer-events: none;
+  visibility: hidden;
+  border: none;
   transition: all 0.3s ease-in-out;
 }
